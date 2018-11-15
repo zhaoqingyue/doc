@@ -1,0 +1,11 @@
+1. 打开第一个终端, 并打开串口
+2. setprop service.adb.tcp.port 5555
+3. stop adbd
+4. start adbd
+5. netcfg(查看盒子IP)
+6. 打开第二个终端
+7. adb kill-server
+8. adb connect 10.0.12.200(10.0.12.200为盒子IP)
+9. 在第一个终端中输入: mount -o remount rw /system
+10. sync
+

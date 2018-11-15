@@ -1,0 +1,4 @@
+mount -w -o remount /dev/block/system /system/
+cd /storage/external_storage/sda1
+cp GV_BATCH.apk /system/app/
+chmod 777 /system/app/*

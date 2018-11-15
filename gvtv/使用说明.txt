@@ -1,0 +1,67 @@
+1. 应用广告位: 媒体识别码(appid+_4) + 广告位识别码
+2. 删除整个目录下的svn: find . -type d -name ".svn"|xargs rm -rf
+3. 去掉串口没用的打印: echo 0 > /proc/sys/kernel/printk
+4. 在串口启动机顶盒的设置页面: am start com.android.settings/.Settings
+5. 查看anr日志: 
+(1) cd /data/anr
+(2) busybox vi traces.txt
+(3) 退出日志(:q!)
+
+6. 连接远程步骤:
+(1) 打开第一个终端, 并打开串口
+(2) setprop service.adb.tcp.port 5555
+(3) stop adbd
+(4) start adbd
+(5) netcfg(查看盒子IP)
+(6) 打开第二个终端
+(7) adb kill-server
+(8) adb connect 10.0.12.200(10.0.12.200为盒子IP)
+(9) 在第一个终端中输入: mount -o remount rw /system
+(10) sync
+
+7. 应用模板开发者提醒：
+(1) EPG接口里面的参数，比如MAC、COUID、产品ID等信息都必须从固件接口里面获取，不要自己直接读取。如果读取不到，就传送空值过去，也不要加默认值。比如类似如下：有值时，mac=xxxx&cpuid=xxxx&...没有值时，mac=&cpuid=....
+原因：我们的应用不能在别的盒子上使用。
+(2) 应用模板的 鉴权方式更改：统一改成定时鉴权（测试部反应有些已经改成这样了，有些是启动一次性鉴权）
+改动原因：统一化; Android Home机制、盒子待机机制好像都不是退出应用，可能该应用在一次鉴权成功后会一直成功下去
+
+8. 最新包名规则提示：
+(1) 应用包名规则： com.szgvtv.ead.app.XXX  变更为 com.sz.ead.app.XXX
+(2) 固件包名规则：com.szgvtv.ead.framework.XXX 变更为 com.sz.ead.framework.XXX
+已经打好上线的应用  就暂时不管以后有新的打包需求时，变更为上面的方式。
+原则就是：不要带 bananatv 和 GVTV 字样
+
+9. 打包带有签名的固件内置apk步骤:(实例: 多级运营2, apk名为Mul2Launcher.apk)
+(1) 生成一个apk包:Mul2Launcher.apk
+(2) 将该apk拷贝到签名环境中, 并重命名为Mul2Launcher1.apk, 本机在/share/sign目录下
+(3) cmd格式: java -jar signapk.jar platform.x509.pem platform.pk8 input.apk output.apk
+例如: java -jar signapk.jar platform.x509.pem platform.pk8 Mul2Launcher1.apk Mul2Launcher.apk
+(4) 生成的Mul2Launcher.apk就是带有签名的apk
+
+10. 替换固件中的内置应用方法:(开发固件过程中调试时经常用到: 先将生成的带有签名的apk拷贝到u盘, 然后将u盘插入机顶盒中)
+(1) mount -w -o remount /dev/block/system /system/
+(2) cd /storage/external_storage/sda1/yyy (带有签名apk的路径)
+(3) cp Mul2Launcher.apk /system/app/
+
+(4) chmod 777 /system/app/*
+(5) 重启机顶盒
+或者(3) cp Mul2Launcher.apk /system/app/做2次, 取代(4)+(5)
+
+11. 应用加载视频失败错误码:
+格式: [错误码：8194（L）] ----前面错误码ret，后面括号是错误类型。
+类型：L：库add节目ret返回值  如：8194（L）
+      P：播放器mediaplayer异常错误对应错误码 如：-38,0（P）
+      T：加载节目超时返回值 如：-3(T)
+      N：网络连接错误 如：-2（N）
+目前播放器加载失败错误类型分4种
+L: 流媒体播放库加载节目报错
+P: 播放器mediaPlayer异常报错
+T: 缓冲节目超时(注意观察缓冲时有无加载速度)
+N: 网络连接异常
+
+12. 后续新发的固件，串口密码和线下升级密码都会有点改动，规则如下：
+固件名称          原始串口密码  更改后串口密码  原始系统升级密码  更改系统升级密码
+TVpad              gvtv818       gvtv81811        2009818         200981811
+BananaTV           gvtv818       gvtv81821        2009818         200981821
+多级运营1(ODM1)    gvtv818       gvtv81831        2009818         200981831
+多级运营2(ODM2)    gvtv818       gvtv81841        2009818         200981841

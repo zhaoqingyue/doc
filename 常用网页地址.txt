@@ -1,0 +1,20 @@
+1. AndroidDevTools: http://www.androiddevtools.cn/index.html#ndk
+2. 知乎: http://www.zhihu.com/
+3. 深户: https://sz12333.gov.cn/rcyj/
+4. 出入境: http://w.sz3e.com/
+5. APP分享功能: http://blog.csdn.net/cwcwj3069/article/details/41698417
+6. 360云盘: http://c101.yunpan.360.cn/my/index/
+7. 微盘: http://vdisk.weibo.com/#/%E6%96%87%E6%A1%A3
+8. Android开源项目: http://www.trinea.cn/android/android-open-source-projects-excellent-project/
+9. AndroidChina: http://www.androidchina.net/
+10. Android开源项目分类汇总: http://blog.csdn.net/educast/article/details/47622467
+11. GitHub 优秀的 Android 开源项目: http://www.open-open.com/lib/view/open1416808977430.html
+12. OSChina 客户端: http://www.oschina.net/app
+13. NBAPlus: https://github.com/SilenceDut/NBAPlus#readme
+14. http://my.oschina.net/kymjs/blog?fromerr=3i21AaUP
+15. KJBitmap使用方法: http://www.cnblogs.com/android-blogs/p/4843395.html
+16. Android 一些重要知识点解析整理: https://github.com/FX-Max/Point-of-Android
+17. Android基础笔试题: http://blog.csdn.net/sbvfhp/article/details/44815055 和 http://blog.csdn.net/sbvfhp/article/category/934148
+18. 知识库: http://lib.csdn.net/base/15/structure
+19. 友盟: http://dev.umeng.com/
+20. 将android studio项目转换成eclipse: http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0110/2294.html

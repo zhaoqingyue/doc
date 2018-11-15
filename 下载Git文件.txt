@@ -1,0 +1,9 @@
+在想要目录下右键—>GitBash，输入
+git clone git@192.168.69.142:android/M550/KMarcket.git
+说明：android/M550/KMarcket.git为下载的文件或文件夹
+
+
+K应用：   git clone git@192.168.69.142:android/M550/KMarcket.git 
+在线FM：  git clone git@192.168.69.142:android/M550/CldFm.git
+小联互凯：git clone git@192.168.69.142:android/M550/CldNavi_Service.git
+K云：     git clone git@192.168.69.142:android/M550/KCloudCenter.git

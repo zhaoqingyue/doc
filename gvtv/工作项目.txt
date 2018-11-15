@@ -1,0 +1,73 @@
+1. 教育应用模板(svn目录: gvos-4.0/android-app/EduTemp):  
+没有打包应用
+
+2. 纯直播模板(svn目录: gvos-4.0/android-app/GVLiveTV): 
+打包的应用共12个(使用老后台)
+(1) 体育online
+(2) 粤海宽频
+(3) 粤TV
+(4) 粵海時移
+(5) BETV
+(6) BETV_HD
+(7) 516網絡電視
+(8) 有線Sports
+(9) INTV
+(10) 101电视
+(11) 风行体育
+(12) 宝岛电视
+
+3. 纯点播模板(svn目录: gvos-4.0/android-app/GVDemandTV): 
+打包的应用共17个(使用老后台)
+(1) 经典剧场
+(2) 巧连智
+(3) 四大名著
+(4) 宫崎骏精选
+(5) 热映影吧
+(6) HKTV
+(7) 音悦时光
+(8) 養身娛樂匯
+(9) 粵童天地
+(10) 潮汕風情
+(11) 优视影院
+(12) 热播美剧
+(13) 星星韩剧
+(14) 人人外剧
+(15) 梦龙电影
+(16) 粤风戏迷
+(17) 儿童天地
+
+4. 港粤经典(svn目录: gvos-4.0/android-app/HKGDClassic): 
+TVpad3移植过来的, 没有打包应用
+
+5. 泰捷模板(svn目录: gvos-4.0/android-app/TaijieTemplates): 
+使用老后台
+(1) 港粤网络电视
+(2) BETV_Plus
+(3) 长江电视
+(4) 粤家TV
+(5) 华彩电视
+使用多级运营后台
+(6) 澳洲華語電視臺
+使用新后台
+(7) 寶島電視
+
+6. TVB模板(svn目录: gvos-4.0/android-app/TvbTemps):
+没有打包应用, 做展示用
+
+7. 多级运营模板2(svn目录: gvos-4.0/android-app/itvvodtemp2):
+打包的应用共2个(使用老后台):
+(1) 华夏DS
+(2) 澳洲中文电视
+
+8. 卡拉OK模板(svn目录: gvos-4.0/android-app/Ktv):
+打包的应用共4个(使用新后台):
+(1) 我爱K歌(中文)
+(2) Kita Menyanyian(马来西亚)
+(3) Viet karaoke(越南)
+(4) คาราโอเกะ (泰国)
+
+9. 多级运营固件: Launcher和商城
+svn目录: gvos-4.0/android-app/Firmware
+(1) blueTV_S805
+(2) UTV_S805
+(3) GTV_S805

@@ -1,0 +1,17 @@
+1. 在要上传的工程master下，右键—>GitBash
+2. git status
+3. git add . -A
+4. git commit -m "更新说明"
+5. git push git@192.168.69.142:android/M550/KMarcket.git master （KMarcket：工程名）
+
+K应用：   git push git@192.168.69.142:android/M550/KMarcket.git master
+在线FM：  git push git@192.168.69.142:android/M550/CldFm.git master
+小联互凯：git push git@192.168.69.142:android/M550/CldNavi_Service.git master
+K云：     git push git@192.168.69.142:android/M550/KCloudCenter.git master
+
+新上传一个工程到git服务器，如：
+1. 在要上传的工程master下（工程里面目录），右键—>GitBash
+2. git init
+3. git add . -A
+4. git commit -m "更新说明"
+5. git push git@192.168.69.142:android/M530/KCloudCenter.git master
